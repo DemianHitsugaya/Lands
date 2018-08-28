@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Lands.Views.LoginPage">
+             x:Class="Lands.Views.LoginPage"
+             Title="Login">
     <ContentPage.Content>
         <StackLayout Padding="10,20,10,5">
             <Label Text="Lands" HorizontalOptions="CenterAndExpand"
@@ -10,18 +11,35 @@
                    />
             <Image Source="onu"
                    WidthRequest="200"></Image>
-            <Label Text="Email"/>
-            <Entry Placeholder="Enter your email"
+            <Grid Margin="0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Email" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry Placeholder="Enter your email" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"
                    Keyboard="Email">
-            </Entry>
-            <Label Text="Password"/>
-            <Entry Placeholder="Enter your password"
+                </Entry>
+                <Label Text="Password" Grid.Row="1" Grid.Column="0"/>
+                <Entry Placeholder="Enter your password" Grid.Row="1" Grid.Column="1"
                    IsPassword="True">
-            </Entry>
-            <ActivityIndicator>
-                
+                </Entry>
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Remember me" VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                <Switch HorizontalOptions="End"></Switch>
+            </StackLayout>            
+            <ActivityIndicator>                
             </ActivityIndicator>
-            <Button Text="Login" BackgroundColor="Navy" TextColor="White" BorderRadius="23"></Button>
+            <StackLayout Margin="40,0">
+                <Button Text="Login" BackgroundColor="Navy" TextColor="White" BorderRadius="23" HeightRequest="46"></Button>
+                <Button Text="Register" BackgroundColor="Purple" TextColor="White" BorderRadius="23" HeightRequest="46"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image Source="facebook_logo" WidthRequest="100"></Image>
+                <Image Source="twitter_logo"  WidthRequest="50"></Image>
+                <Image Source="instagram_logo"  WidthRequest="50"></Image>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
