@@ -27,7 +27,7 @@
             </Grid>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Remember me" VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
-                <Switch HorizontalOptions="End"></Switch>
+                <Switch HorizontalOptions="End" IsToggled="True"></Switch>
             </StackLayout>            
             <ActivityIndicator>                
             </ActivityIndicator>
